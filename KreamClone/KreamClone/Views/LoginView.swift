@@ -61,7 +61,7 @@ class LoginView: UIView {
     private lazy var passwordLabel: UILabel = {
         let passwordLabel = UILabel()
         
-        passwordLabel.text = "이메일 주소"
+        passwordLabel.text = "비밀번호"
         passwordLabel.font = .systemFont(ofSize: 12)
         passwordLabel.textColor = .black
         passwordLabel.textAlignment = .left
