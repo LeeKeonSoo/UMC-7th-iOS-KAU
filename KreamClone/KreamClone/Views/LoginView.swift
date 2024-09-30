@@ -86,7 +86,7 @@ class LoginView: UIView {
         return passwordTextField
     } ()
     
-    private lazy var loginButton: UIButton = {
+    public lazy var loginButton: UIButton = {
         let loginButton = UIButton()
         
         loginButton.setTitle("로그인", for: .normal)
