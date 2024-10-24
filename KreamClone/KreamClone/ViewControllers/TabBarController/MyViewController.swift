@@ -27,6 +27,12 @@ class MyViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private lazy var profileImage: UIImageView = {
+        let imageView = UIImageView()
+        
+        return imageView
+    } ()
+    
     
     private var myView: MyView {
         let myview = MyView()
@@ -39,6 +45,7 @@ class MyViewController: UIViewController {
     @objc func profileButtonTap() {
         let profileManageVC = ProfileManageViewController()
         navigationController?.pushViewController(profileManageVC, animated: true)
+        
     }
     
 }

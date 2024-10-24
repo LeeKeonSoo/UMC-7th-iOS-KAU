@@ -9,6 +9,8 @@ import UIKit
 
 class BaseViewController: UITabBarController {
 
+    
+    
     private lazy var HomeVC = HomeViewController()
     private lazy var StyleVC = StyleViewController()
     private lazy var ShopVC = ShopViewController()
@@ -27,6 +29,7 @@ class BaseViewController: UITabBarController {
         MyVC.tabBarItem = UITabBarItem(title: "MY", image: UIImage(named: "Union"), tag: 4)
         
         self.viewControllers = [HomeVC, StyleVC, ShopVC, SavedVC, MyVC]
+        
         
     }
     

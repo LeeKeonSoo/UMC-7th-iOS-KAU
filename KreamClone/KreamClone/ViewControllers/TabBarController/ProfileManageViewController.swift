@@ -9,6 +9,10 @@ import UIKit
 
 class ProfileManageViewController: UIViewController {
 
+    let userDefaultsModel = UserDefaultsModel()
+    
+    public var receivedImage = UIImageView()
+    
     let profileManageView = ProfileManageView()
     
     override func viewDidLoad() {
@@ -18,6 +22,9 @@ class ProfileManageViewController: UIViewController {
         setupButtons()
         
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        profileManageView.profileImage = receivedImage
+        
     }
     
     required init?(coder: NSCoder) {
@@ -39,12 +46,16 @@ class ProfileManageViewController: UIViewController {
     
     @objc func changeButtonTapped(sender: UIButton) {
         if sender == profileManageView.emailModifyButton {
+            userDefaultsModel.saveUserEmail(profileManageView.userEmailTextField.text ?? "")
             profileManageView.userEmailTextField.text = ""
             sender.setTitle("확인", for: .normal)
         } else {
+            userDefaultsModel.saveUserPassword(profileManageView.userPasswordTextField.text ?? "")
             profileManageView.userPasswordTextField.text = ""
             sender.setTitle("확인", for: .normal)
         }
+        
+        
     }
     
     @objc func backButtonTapped()  {

@@ -43,7 +43,7 @@ class LoginView: UIView {
         return emailLabel
     } ()
     
-    private lazy var emailTextField: UITextField = {
+    public lazy var emailTextField: UITextField = {
         let emailTextField = UITextField()
         
         emailTextField.placeholder = "  예) kream@kream.co.kr"
@@ -71,7 +71,7 @@ class LoginView: UIView {
         return passwordLabel
     } ()
     
-    private lazy var passwordTextField: UITextField = {
+    public lazy var passwordTextField: UITextField = {
         let passwordTextField = UITextField()
         
         passwordTextField.placeholder = "  비밀번호를 입력해주세요"
@@ -199,5 +199,6 @@ class LoginView: UIView {
         
         
     }
+
     
 }

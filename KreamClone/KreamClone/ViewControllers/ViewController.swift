@@ -10,6 +10,8 @@ import SnapKit
 
 class ViewController: UIViewController {
     
+    private let userDefaultsModel = UserDefaultsModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = loginView
@@ -29,6 +31,20 @@ class ViewController: UIViewController {
         let BaseVC = BaseViewController()
         BaseVC.modalPresentationStyle = .fullScreen
         present(BaseVC, animated: true, completion: nil)
+        
+        guard let email = loginView.emailTextField.text, !email.isEmpty else {
+            return
+        }
+        
+        userDefaultsModel.saveUserEmail(email)
+        
+        guard let password = loginView.passwordTextField.text, !password.isEmpty else {
+            return
+        }
+        
+        userDefaultsModel.saveUserPassword(password)
     }
+    
+    
 }
 

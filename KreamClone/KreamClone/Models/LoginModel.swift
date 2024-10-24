@@ -7,7 +7,32 @@
 
 import Foundation
 
+
 struct Login {
-    var id: String = ""
+    var email: String = ""
     var password: String = ""
+}
+
+class UserDefaultsModel {
+    private let userDefaults = UserDefaults.standard
+    
+    private let email: String = "userEmail"
+    private let password: String = "userPassword"
+    
+    public func saveUserEmail(_ text: String) {
+        userDefaults.set(text, forKey: email)
+    }
+    
+    public func loadUserEmail() -> String? {
+        return userDefaults.string(forKey: email)
+    }
+    
+    public func saveUserPassword(_ text: String) {
+        userDefaults.set(text, forKey: password)
+    }
+    
+    public func loadUserPassword() -> String? {
+        return userDefaults.string(forKey: password)
+    }
+    
 }
