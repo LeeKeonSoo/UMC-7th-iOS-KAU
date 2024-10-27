@@ -7,23 +7,54 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, UICollectionViewDataSource {
+    
+    
+    private let rootView = HomeView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        view = rootView
+        
+        setupAction()
+        setupDelegate()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupAction() {
+        rootView.segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(segment:)), for: .valueChanged)
     }
-    */
+    
+    private func setupDelegate() {
+        rootView.itemsCollectionView.dataSource = self
+    }
+    
+    @objc private func segmentedControlValueChanged(segment: UISegmentedControl) {
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return HomeButtonModel.dummy().count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeButtonCollectionViewCell.identifier, for: indexPath)
+                as? HomeButtonCollectionViewCell else { return UICollectionViewCell() }
+    
+        let list = HomeButtonModel.dummy()
+        
+        cell.imageView.image = list[indexPath.row].image
+        cell.titleLabel.text = list[indexPath.row].title
+        
+        return cell
+    }
+    
+    @objc func searchTextFieldtapped() {
+        
+    }
+
+    
 
 }

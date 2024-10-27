@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE6502A42CA91C98003AE4D9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DE6502A32CA91C98003AE4D9 /* SnapKit */; };
+		DE741F232CCE641700DB885C /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DE741F222CCE641700DB885C /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6502A42CA91C98003AE4D9 /* SnapKit in Frameworks */,
+				DE741F232CCE641700DB885C /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,7 @@
 			name = KreamClone;
 			packageProductDependencies = (
 				DE6502A32CA91C98003AE4D9 /* SnapKit */,
+				DE741F222CCE641700DB885C /* Then */,
 			);
 			productName = KreamClone;
 			productReference = DEC6A9592CA3A3F1003C5D8B /* KreamClone.app */;
@@ -115,6 +118,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				DE6502A22CA91C98003AE4D9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DE741F212CCE641700DB885C /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DEC6A95A2CA3A3F1003C5D8B /* Products */;
@@ -352,6 +356,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		DE741F212CCE641700DB885C /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -359,6 +371,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DE6502A22CA91C98003AE4D9 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		DE741F222CCE641700DB885C /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE741F212CCE641700DB885C /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
