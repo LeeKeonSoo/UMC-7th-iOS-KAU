@@ -46,10 +46,12 @@ class ProfileManageViewController: UIViewController {
     
     @objc func changeButtonTapped(sender: UIButton) {
         if sender == profileManageView.emailModifyButton {
+            profileManageView.userEmailTextField.isUserInteractionEnabled = true
             userDefaultsModel.saveUserEmail(profileManageView.userEmailTextField.text ?? "")
             profileManageView.userEmailTextField.text = ""
             sender.setTitle("확인", for: .normal)
         } else {
+            profileManageView.userPasswordTextField.isUserInteractionEnabled = true
             userDefaultsModel.saveUserPassword(profileManageView.userPasswordTextField.text ?? "")
             profileManageView.userPasswordTextField.text = ""
             sender.setTitle("확인", for: .normal)

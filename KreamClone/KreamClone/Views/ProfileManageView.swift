@@ -73,7 +73,7 @@ class ProfileManageView: UIView {
         TextField.placeholder = " 새로운 이메일을 입력해주세요!"
         TextField.font = .systemFont(ofSize: 14)
         TextField.layer.cornerRadius = 1
-        TextField.isUserInteractionEnabled = true
+        TextField.isUserInteractionEnabled = false
         
         return TextField
     } ()
@@ -93,7 +93,7 @@ class ProfileManageView: UIView {
         TextField.placeholder = " 새로운 비밀번호를 입력해주세요!"
         TextField.font = .systemFont(ofSize: 14)
         TextField.layer.cornerRadius = 1
-        TextField.isUserInteractionEnabled = true
+        TextField.isUserInteractionEnabled = false
         
         return TextField
     } ()
