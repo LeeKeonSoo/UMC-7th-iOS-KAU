@@ -16,7 +16,17 @@ class HomeView: UIView {
         $0.setBackgroundImage(UIImage(), for: .highlighted, barMetrics: .default)
         $0.setDividerImage(UIImage(), forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
         $0.selectedSegmentIndex = 0
-                
+        
+        $0.setContentPositionAdjustment(.zero, forSegmentType: .any, barMetrics: .default)
+            
+        let emptyImage = UIImage()
+        $0.setDividerImage(emptyImage,
+                          forLeftSegmentState: .normal,
+                          rightSegmentState: .normal,
+                          barMetrics: .default)
+        
+        $0.apportionsSegmentWidthsByContent = true
+    
         $0.setTitleTextAttributes(
             [
                 NSAttributedString.Key.foregroundColor: UIColor.black,
@@ -46,8 +56,12 @@ class HomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    let underLine = UIView().then {
+        $0.backgroundColor = UIColor.black
+    }
+    
     private let searchLabel = UITextField().then {
-        $0.backgroundColor = UIColor.lightGray
+        $0.backgroundColor = UIColor(hex: "#F5F5F5")
         $0.placeholder = "  브랜드, 상품, 프로필, 태그 등"
         $0.layer.cornerRadius = 12
     }
@@ -75,6 +89,7 @@ class HomeView: UIView {
             searchLabel,
             alertButton,
             segmentedControl,
+            underLine,
             adImage,
             itemsCollectionView
             
@@ -95,14 +110,22 @@ class HomeView: UIView {
         }
         
         segmentedControl.snp.makeConstraints { make in
-            make.horizontalEdges.equalToSuperview().inset(24)
             make.top.equalTo(searchLabel.snp.bottom).offset(16)
+            make.horizontalEdges.equalToSuperview().inset(24)
             make.height.equalTo(27)
+            make.centerX.equalToSuperview()
+        }
+        
+        underLine.snp.makeConstraints { make in
+            make.top.equalTo(segmentedControl.snp.bottom).offset(8)
+            make.height.equalTo(2)
+            make.width.equalTo(28)
+            make.leading.equalTo(segmentedControl.snp.leading)
         }
         
         
         adImage.snp.makeConstraints { make in
-            make.top.equalTo(segmentedControl.snp.bottom)
+            make.top.equalTo(underLine.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(374)
         }
