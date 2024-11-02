@@ -84,17 +84,85 @@ class HomeView: UIView {
         $0.register(HomeButtonCollectionViewCell.self, forCellWithReuseIdentifier: HomeButtonCollectionViewCell.identifier)
     }
     
+    private lazy var scrollView = UIScrollView().then {
+        $0.showsVerticalScrollIndicator = true
+        $0.showsHorizontalScrollIndicator = false
+    }
+    
+    private lazy var justDroppedScrollView = UIScrollView().then {
+        $0.showsHorizontalScrollIndicator = true
+        $0.showsVerticalScrollIndicator = false
+        $0.isScrollEnabled = true
+        $0.alwaysBounceHorizontal = true
+    }
+    
+    private lazy var justDroppedItem = UIImageView().then {
+        $0.image = UIImage(named: "just_dropped_list")
+    }
+    
+    private lazy var justDroppedLabel = UILabel().then {
+        $0.text = "Just Dropped"
+        $0.font = .systemFont(ofSize: 16, weight: .bold)
+    }
+    
+    private lazy var justDroppedSubLabel = UILabel().then {
+        $0.text = "발매 상품"
+        $0.font = .systemFont(ofSize: 13)
+        $0.textColor = UIColor(hex: "#878787")
+    }
+    
+    private lazy var storyScrollView = UIScrollView().then {
+        $0.showsHorizontalScrollIndicator = true
+        $0.showsVerticalScrollIndicator = false
+        $0.isScrollEnabled = true
+        $0.alwaysBounceHorizontal = true
+    }
+    
+    private lazy var storyItem = UIImageView().then {
+        $0.image = UIImage(named: "story_list")
+    }
+    
+    private lazy var storyScrollLabel = UILabel().then {
+        $0.text = "본격 한파대비! 연말 필수템 모음"
+        $0.font = .systemFont(ofSize: 16, weight: .bold)
+    }
+    
+    private lazy var storyScrollSubLabel = UILabel().then {
+        $0.text = "#해피홀리룩챌린지"
+        $0.font = .systemFont(ofSize: 13)
+        $0.textColor = UIColor(hex: "#878787")
+    }
+    
+    private let contentView = UIView()
+    
     private func setupViews() {
+       
+        [searchLabel, alertButton, segmentedControl, underLine].forEach { addSubview($0) }
+        
+        addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        
         [
-            searchLabel,
-            alertButton,
-            segmentedControl,
-            underLine,
             adImage,
-            itemsCollectionView
+            itemsCollectionView,
+            justDroppedScrollView,
+            justDroppedLabel,
+            justDroppedSubLabel,
+            storyScrollView,
+            storyScrollLabel,
+            storyScrollSubLabel
             
-            
-        ].forEach {addSubview($0)}
+        ].forEach { contentView.addSubview($0) }
+        
+        contentView.snp.makeConstraints { make in
+            make.edges.equalTo(scrollView)
+            make.width.equalTo(scrollView)
+        }
+        
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(underLine.snp.bottom)
+            make.leading.trailing.bottom.equalToSuperview()
+        }
         
         searchLabel.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide).offset(6)
@@ -125,8 +193,8 @@ class HomeView: UIView {
         
         
         adImage.snp.makeConstraints { make in
-            make.top.equalTo(underLine.snp.bottom)
-            make.leading.trailing.equalToSuperview()
+            make.top.equalTo(contentView)
+            make.leading.trailing.equalTo(contentView)
             make.height.equalTo(374)
         }
         
@@ -136,5 +204,54 @@ class HomeView: UIView {
             make.height.equalTo(182)
             make.width.equalTo(341)
         }
+        
+        justDroppedScrollView.snp.makeConstraints { make in
+            make.top.equalTo(itemsCollectionView.snp.bottom).offset(30)
+            make.leading.trailing.equalTo(contentView)
+            make.height.equalTo(340)
+        }
+        
+        justDroppedLabel.snp.makeConstraints { make in
+            make.top.equalTo(justDroppedScrollView.snp.top).offset(20)
+            make.leading.equalToSuperview().offset(16)
+        }
+        
+        justDroppedSubLabel.snp.makeConstraints { make in
+            make.top.equalTo(justDroppedLabel.snp.bottom).offset(4)
+            make.leading.equalTo(justDroppedLabel.snp.leading)
+        }
+        
+        storyScrollView.snp.makeConstraints { make in
+            make.top.equalTo(justDroppedScrollView.snp.bottom)
+            make.leading.trailing.equalTo(contentView)
+            make.height.equalTo(340)
+        }
+        
+        storyScrollLabel.snp.makeConstraints { make in
+            make.top.equalTo(storyScrollView.snp.top).offset(20)
+            make.leading.equalToSuperview().offset(16)
+        }
+        
+        storyScrollSubLabel.snp.makeConstraints { make in
+            make.top.equalTo(storyScrollLabel.snp.bottom).offset(4)
+            make.leading.equalTo(storyScrollLabel.snp.leading)
+        }
+        
+        justDroppedScrollView.addSubview(justDroppedItem)
+        
+        justDroppedItem.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalToSuperview().offset(73)
+            
+        }
+        
+        storyScrollView.addSubview(storyItem)
+        
+        storyItem.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalToSuperview().offset(73)
+            make.bottom.equalTo(contentView)
+        }
+        
     }
 }
