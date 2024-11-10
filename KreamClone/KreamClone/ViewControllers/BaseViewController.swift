@@ -20,7 +20,7 @@ class BaseViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBar.backgroundColor = .white
         
         HomeVC.tabBarItem = UITabBarItem(title: "HOME", image: UIImage(named: "icon_home_fill"), tag: 0)
         StyleVC.tabBarItem = UITabBarItem(title: "STYLE", image: UIImage(named: "icon_style_fill"), tag: 1)
