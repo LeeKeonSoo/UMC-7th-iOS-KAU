@@ -13,6 +13,16 @@ struct Login {
     var password: String = ""
 }
 
+struct KakaoLogin: Codable {
+    let kakaoEmail: String
+    let kakaoPassword: String
+    
+    enum CodingKeys: String, CodingKey {
+        case kakaoEmail = "email"
+        case kakaoPassword = "password"
+    }
+}
+
 class UserDefaultsModel {
     private let userDefaults = UserDefaults.standard
     

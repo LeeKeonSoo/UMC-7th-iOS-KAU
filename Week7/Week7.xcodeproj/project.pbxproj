@@ -7,70 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE2546772CE7279500C60671 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DE2546762CE7279500C60671 /* Alamofire */; };
-		DE2546812CE7329D00C60671 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DE2546802CE7329D00C60671 /* KakaoSDK */; };
-		DE2546832CE7329D00C60671 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DE2546822CE7329D00C60671 /* KakaoSDKAuth */; };
-		DE2546852CE7329D00C60671 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = DE2546842CE7329D00C60671 /* KakaoSDKCommon */; };
-		DE2546872CE895AC00C60671 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = DE2546862CE895AC00C60671 /* KakaoSDKCert */; };
-		DE67E6492CE658BF00CBDC1A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DE67E6482CE658BF00CBDC1A /* SnapKit */; };
-		DE67E64C2CE658C600CBDC1A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DE67E64B2CE658C600CBDC1A /* Then */; };
+		DECADA122CE70FA9004DD441 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DECADA112CE70FA9004DD441 /* SnapKit */; };
+		DECADA152CE70FC8004DD441 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DECADA142CE70FC8004DD441 /* Alamofire */; };
+		DECADA182CE71036004DD441 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DECADA172CE71036004DD441 /* Then */; };
+		DECADA1A2CE722EB004DD441 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DECADA192CE722EB004DD441 /* Then */; };
+		DEF690A82CE7022E00A5FD8E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DEF690A72CE7022E00A5FD8E /* Alamofire */; };
+		DEF690AB2CE702F100A5FD8E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DEF690AA2CE702F100A5FD8E /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DEC6A9592CA3A3F1003C5D8B /* KreamClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreamClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE71754C2CE107D1000D491B /* Week7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DEC6A96B2CA3A3F3003C5D8B /* Exceptions for "KreamClone" folder in "KreamClone" target */ = {
+		DE71755E2CE107D2000D491B /* Exceptions for "Week7" folder in "Week7" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = DEC6A9582CA3A3F1003C5D8B /* KreamClone */;
+			target = DE71754B2CE107D1000D491B /* Week7 */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DEC6A95B2CA3A3F1003C5D8B /* KreamClone */ = {
+		DE71754E2CE107D1000D491B /* Week7 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				DEC6A96B2CA3A3F3003C5D8B /* Exceptions for "KreamClone" folder in "KreamClone" target */,
+				DE71755E2CE107D2000D491B /* Exceptions for "Week7" folder in "Week7" target */,
 			);
-			path = KreamClone;
+			path = Week7;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DEC6A9562CA3A3F1003C5D8B /* Frameworks */ = {
+		DE7175492CE107D1000D491B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE2546772CE7279500C60671 /* Alamofire in Frameworks */,
-				DE2546812CE7329D00C60671 /* KakaoSDK in Frameworks */,
-				DE67E6492CE658BF00CBDC1A /* SnapKit in Frameworks */,
-				DE67E64C2CE658C600CBDC1A /* Then in Frameworks */,
-				DE2546852CE7329D00C60671 /* KakaoSDKCommon in Frameworks */,
-				DE2546872CE895AC00C60671 /* KakaoSDKCert in Frameworks */,
-				DE2546832CE7329D00C60671 /* KakaoSDKAuth in Frameworks */,
+				DECADA152CE70FC8004DD441 /* Alamofire in Frameworks */,
+				DECADA182CE71036004DD441 /* Then in Frameworks */,
+				DEF690AB2CE702F100A5FD8E /* Alamofire in Frameworks */,
+				DECADA1A2CE722EB004DD441 /* Then in Frameworks */,
+				DECADA122CE70FA9004DD441 /* SnapKit in Frameworks */,
+				DEF690A82CE7022E00A5FD8E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DEC6A9502CA3A3F1003C5D8B = {
+		DE7175432CE107D1000D491B = {
 			isa = PBXGroup;
 			children = (
-				DEC6A95B2CA3A3F1003C5D8B /* KreamClone */,
-				DEC6A95A2CA3A3F1003C5D8B /* Products */,
+				DE71754E2CE107D1000D491B /* Week7 */,
+				DE71754D2CE107D1000D491B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DEC6A95A2CA3A3F1003C5D8B /* Products */ = {
+		DE71754D2CE107D1000D491B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DEC6A9592CA3A3F1003C5D8B /* KreamClone.app */,
+				DE71754C2CE107D1000D491B /* Week7.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,77 +76,67 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DEC6A9582CA3A3F1003C5D8B /* KreamClone */ = {
+		DE71754B2CE107D1000D491B /* Week7 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DEC6A96C2CA3A3F3003C5D8B /* Build configuration list for PBXNativeTarget "KreamClone" */;
+			buildConfigurationList = DE71755F2CE107D2000D491B /* Build configuration list for PBXNativeTarget "Week7" */;
 			buildPhases = (
-				DEC6A9552CA3A3F1003C5D8B /* Sources */,
-				DEC6A9562CA3A3F1003C5D8B /* Frameworks */,
-				DEC6A9572CA3A3F1003C5D8B /* Resources */,
+				DE7175482CE107D1000D491B /* Sources */,
+				DE7175492CE107D1000D491B /* Frameworks */,
+				DE71754A2CE107D1000D491B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DEC6A95B2CA3A3F1003C5D8B /* KreamClone */,
+				DE71754E2CE107D1000D491B /* Week7 */,
 			);
-			name = KreamClone;
-			packageProductDependencies = (
-				DE67E6482CE658BF00CBDC1A /* SnapKit */,
-				DE67E64B2CE658C600CBDC1A /* Then */,
-				DE2546762CE7279500C60671 /* Alamofire */,
-				DE2546802CE7329D00C60671 /* KakaoSDK */,
-				DE2546822CE7329D00C60671 /* KakaoSDKAuth */,
-				DE2546842CE7329D00C60671 /* KakaoSDKCommon */,
-				DE2546862CE895AC00C60671 /* KakaoSDKCert */,
-			);
-			productName = KreamClone;
-			productReference = DEC6A9592CA3A3F1003C5D8B /* KreamClone.app */;
+			name = Week7;
+			productName = Week7;
+			productReference = DE71754C2CE107D1000D491B /* Week7.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DEC6A9512CA3A3F1003C5D8B /* Project object */ = {
+		DE7175442CE107D1000D491B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					DEC6A9582CA3A3F1003C5D8B = {
-						CreatedOnToolsVersion = 16.0;
+					DE71754B2CE107D1000D491B = {
+						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
-			buildConfigurationList = DEC6A9542CA3A3F1003C5D8B /* Build configuration list for PBXProject "KreamClone" */;
+			buildConfigurationList = DE7175472CE107D1000D491B /* Build configuration list for PBXProject "Week7" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = DEC6A9502CA3A3F1003C5D8B;
+			mainGroup = DE7175432CE107D1000D491B;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				DE67E6472CE658BF00CBDC1A /* XCRemoteSwiftPackageReference "SnapKit" */,
-				DE67E64A2CE658C600CBDC1A /* XCRemoteSwiftPackageReference "Then" */,
-				DE2546752CE7279500C60671 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				DE25467F2CE7329D00C60671 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				DECADA102CE70FA9004DD441 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DECADA132CE70FC8004DD441 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DECADA162CE71036004DD441 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = DEC6A95A2CA3A3F1003C5D8B /* Products */;
+			productRefGroup = DE71754D2CE107D1000D491B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DEC6A9582CA3A3F1003C5D8B /* KreamClone */,
+				DE71754B2CE107D1000D491B /* Week7 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DEC6A9572CA3A3F1003C5D8B /* Resources */ = {
+		DE71754A2CE107D1000D491B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -158,7 +146,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DEC6A9552CA3A3F1003C5D8B /* Sources */ = {
+		DE7175482CE107D1000D491B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -168,8 +156,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		DEC6A96D2CA3A3F3003C5D8B /* Debug */ = {
+		DE7175602CE107D2000D491B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = DE71754E2CE107D1000D491B /* Week7 */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -177,7 +167,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UL8N5DYKBQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KreamClone/Info.plist;
+				INFOPLIST_FILE = Week7/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -187,7 +177,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keonsoo.KreamClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keonsoo.Week7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -195,8 +185,10 @@
 			};
 			name = Debug;
 		};
-		DEC6A96E2CA3A3F3003C5D8B /* Release */ = {
+		DE7175612CE107D2000D491B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = DE71754E2CE107D1000D491B /* Week7 */;
+			baseConfigurationReferenceRelativePath = Secrets.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -204,7 +196,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UL8N5DYKBQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = KreamClone/Info.plist;
+				INFOPLIST_FILE = Week7/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -214,7 +206,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keonsoo.KreamClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keonsoo.Week7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -222,7 +214,7 @@
 			};
 			name = Release;
 		};
-		DEC6A96F2CA3A3F3003C5D8B /* Debug */ = {
+		DE7175622CE107D2000D491B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -274,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -285,7 +277,7 @@
 			};
 			name = Debug;
 		};
-		DEC6A9702CA3A3F3003C5D8B /* Release */ = {
+		DE7175632CE107D2000D491B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -344,20 +336,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DEC6A9542CA3A3F1003C5D8B /* Build configuration list for PBXProject "KreamClone" */ = {
+		DE7175472CE107D1000D491B /* Build configuration list for PBXProject "Week7" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DEC6A96F2CA3A3F3003C5D8B /* Debug */,
-				DEC6A9702CA3A3F3003C5D8B /* Release */,
+				DE7175622CE107D2000D491B /* Debug */,
+				DE7175632CE107D2000D491B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DEC6A96C2CA3A3F3003C5D8B /* Build configuration list for PBXNativeTarget "KreamClone" */ = {
+		DE71755F2CE107D2000D491B /* Build configuration list for PBXNativeTarget "Week7" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DEC6A96D2CA3A3F3003C5D8B /* Debug */,
-				DEC6A96E2CA3A3F3003C5D8B /* Release */,
+				DE7175602CE107D2000D491B /* Debug */,
+				DE7175612CE107D2000D491B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -365,23 +357,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DE2546752CE7279500C60671 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.10.1;
-			};
-		};
-		DE25467F2CE7329D00C60671 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kakao/kakao-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.23.0;
-			};
-		};
-		DE67E6472CE658BF00CBDC1A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		DECADA102CE70FA9004DD441 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -389,7 +365,15 @@
 				minimumVersion = 5.7.1;
 			};
 		};
-		DE67E64A2CE658C600CBDC1A /* XCRemoteSwiftPackageReference "Then" */ = {
+		DECADA132CE70FC8004DD441 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+		DECADA162CE71036004DD441 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then.git";
 			requirement = {
@@ -397,45 +381,56 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		DEF690A62CE7022E00A5FD8E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.8.1;
+			};
+		};
+		DEF690A92CE702F100A5FD8E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DE2546762CE7279500C60671 /* Alamofire */ = {
+		DECADA112CE70FA9004DD441 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DE2546752CE7279500C60671 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		DE2546802CE7329D00C60671 /* KakaoSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DE25467F2CE7329D00C60671 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDK;
-		};
-		DE2546822CE7329D00C60671 /* KakaoSDKAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DE25467F2CE7329D00C60671 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKAuth;
-		};
-		DE2546842CE7329D00C60671 /* KakaoSDKCommon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DE25467F2CE7329D00C60671 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKCommon;
-		};
-		DE2546862CE895AC00C60671 /* KakaoSDKCert */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DE25467F2CE7329D00C60671 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
-			productName = KakaoSDKCert;
-		};
-		DE67E6482CE658BF00CBDC1A /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DE67E6472CE658BF00CBDC1A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = DECADA102CE70FA9004DD441 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		DE67E64B2CE658C600CBDC1A /* Then */ = {
+		DECADA142CE70FC8004DD441 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DE67E64A2CE658C600CBDC1A /* XCRemoteSwiftPackageReference "Then" */;
+			package = DECADA132CE70FC8004DD441 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DECADA172CE71036004DD441 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DECADA162CE71036004DD441 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		DECADA192CE722EB004DD441 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DECADA162CE71036004DD441 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		DEF690A72CE7022E00A5FD8E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEF690A62CE7022E00A5FD8E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DEF690AA2CE702F100A5FD8E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEF690A92CE702F100A5FD8E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = DEC6A9512CA3A3F1003C5D8B /* Project object */;
+	rootObject = DE7175442CE107D1000D491B /* Project object */;
 }

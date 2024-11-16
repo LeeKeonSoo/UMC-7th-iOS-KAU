@@ -1,0 +1,8 @@
+platform :ios, '18.1' # 사용하는 iOS 버전에 맞게 수정
+use_frameworks!
+
+target 'Week7' do  # 프로젝트 이름으로 수정
+  pod 'SnapKit'
+  pod 'Then'
+  pod 'Alamofire'
+end

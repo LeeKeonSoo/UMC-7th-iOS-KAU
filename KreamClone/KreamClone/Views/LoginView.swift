@@ -104,7 +104,7 @@ class LoginView: UIView {
     private lazy var kakaoLoginImage: UIImageView = {
         let kakaoLoginImage = UIImageView()
         
-        kakaoLoginImage.image = UIImage(named: "KakaoLogin")
+        kakaoLoginImage.image = UIImage(named: "kakao_login")
         kakaoLoginImage.contentMode = .scaleAspectFit
         
         kakaoLoginImage.translatesAutoresizingMaskIntoConstraints = false
@@ -112,7 +112,7 @@ class LoginView: UIView {
         return kakaoLoginImage
     } ()
     
-    private lazy var kakaoLoginButton: UIButton = {
+    lazy var kakaoLoginButton: UIButton = {
         let kakaoLoginButton = UIButton()
         
         kakaoLoginButton.backgroundColor = .clear

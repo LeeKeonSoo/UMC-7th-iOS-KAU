@@ -1,15 +1,11 @@
 //
 //  AppDelegate.swift
-//  KreamClone
+//  Week7
 //
-//  Created by 이건수 on 2024.09.25.
+//  Created by 이건수 on 2024.11.11.
 //
 
 import UIKit
-import KakaoSDKAuth
-import KakaoSDKUser
-import KakaoSDKCommon
-
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        KakaoSDK.initSDK(appKey: "41b026f0e1591e4de8601ca10afd5b06")
-        
+        // Override point for customization after application launch.
         return true
     }
 
@@ -32,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchiiingWithOptions.
+        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
