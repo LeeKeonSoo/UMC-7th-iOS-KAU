@@ -60,9 +60,11 @@ class HomeView: UIView {
         $0.backgroundColor = UIColor.black
     }
     
-    private let searchLabel = UITextField().then {
+    let searchLabel = UIButton().then {
         $0.backgroundColor = UIColor(hex: "#F5F5F5")
-        $0.placeholder = "  브랜드, 상품, 프로필, 태그 등"
+        $0.setTitle("  브랜드, 상품, 프로필, 태그 등", for: .normal)
+        $0.setTitleColor(UIColor.lightGray, for: .normal)
+        $0.contentHorizontalAlignment = .left
         $0.layer.cornerRadius = 12
     }
     
@@ -155,8 +157,9 @@ class HomeView: UIView {
         ].forEach { contentView.addSubview($0) }
         
         contentView.snp.makeConstraints { make in
-            make.edges.equalTo(scrollView)
-            make.width.equalTo(scrollView)
+            make.edges.equalTo(scrollView.contentLayoutGuide)
+            make.width.equalTo(scrollView.frameLayoutGuide)
+            make.height.equalTo(1200)
         }
         
         scrollView.snp.makeConstraints { make in
@@ -250,7 +253,7 @@ class HomeView: UIView {
         storyItem.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
             make.top.equalToSuperview().offset(73)
-            make.bottom.equalTo(contentView)
+            make.bottom.equalToSuperview().offset(-20)
         }
         
     }

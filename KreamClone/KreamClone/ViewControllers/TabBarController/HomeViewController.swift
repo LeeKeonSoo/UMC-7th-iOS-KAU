@@ -16,7 +16,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        view = rootView
+        view.addSubview(rootView)
+        
+        rootView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         
         setupAction()
         setupDelegate()
@@ -26,11 +30,13 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
     
     private func setupAction() {
         rootView.segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+        rootView.searchLabel.addTarget(self, action: #selector(searchTextFieldtapped), for: .touchUpInside)
     }
     
     private func setupDelegate() {
         rootView.itemsCollectionView.dataSource = self
     }
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,8 +55,10 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         return cell
     }
     
-    @objc func searchTextFieldtapped() {
-        
+    @objc private func searchTextFieldtapped() {
+        let VC = HomeSearchViewController()
+        VC.modalPresentationStyle = .fullScreen
+        present(VC, animated: true)
     }
     
     @objc private func segmentedControlValueChanged(_ sender: UISegmentedControl) {
