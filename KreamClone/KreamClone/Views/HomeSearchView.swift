@@ -19,9 +19,11 @@ class HomeSearchView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private let searchLabel = UITextField().then {
+    let searchTextField = UIButton().then {
         $0.backgroundColor = UIColor(hex: "#F5F5F5")
-        $0.placeholder = "  브랜드, 상품, 프로필, 태그 등"
+        $0.setTitle("  브랜드, 상품, 프로필, 태그 등", for: .normal)
+        $0.setTitleColor(UIColor.lightGray, for: .normal)
+        $0.contentHorizontalAlignment = .left
         $0.layer.cornerRadius = 12
     }
     
@@ -42,8 +44,8 @@ class HomeSearchView: UIView {
     let recommendCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
         $0.minimumInteritemSpacing = 8
         $0.minimumLineSpacing = 12
+        $0.itemSize = UICollectionViewFlowLayout.automaticSize
         $0.estimatedItemSize = CGSize(width: 100, height: 32)
-        $0.sectionInset = .zero
     }).then {
         $0.isScrollEnabled = false
         $0.register(HomeSearchCollectionViewCell.self, forCellWithReuseIdentifier: HomeSearchCollectionViewCell.identifier)
@@ -51,14 +53,14 @@ class HomeSearchView: UIView {
     
     private func setupViews() {
         [
-            searchLabel,
+            searchTextField,
             cancelButton,
             underLine,
             recommendLabel,
             recommendCollectionView
         ].forEach { addSubview($0) }
         
-        searchLabel.snp.makeConstraints { make in
+        searchTextField.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide).offset(6)
             make.leading.equalToSuperview().offset(16)
             make.height.equalTo(40)
@@ -66,13 +68,13 @@ class HomeSearchView: UIView {
         }
         
         cancelButton.snp.makeConstraints { make in
-            make.centerY.equalTo(searchLabel.snp.centerY)
+            make.centerY.equalTo(searchTextField.snp.centerY)
             make.trailing.equalToSuperview().offset(-16)
         }
         
         underLine.snp.makeConstraints { make in
             make.height.equalTo(1)
-            make.top.equalTo(searchLabel.snp.bottom).offset(11)
+            make.top.equalTo(searchTextField.snp.bottom).offset(11)
             make.leading.trailing.equalToSuperview()
         }
         
@@ -83,7 +85,8 @@ class HomeSearchView: UIView {
         
         recommendCollectionView.snp.makeConstraints { make in
             make.top.equalTo(recommendLabel.snp.bottom).offset(11)
-            make.leading.trailing.equalToSuperview().inset(16)
+            make.leading.equalToSuperview().offset(15)
+            make.trailing.equalToSuperview().offset(-30)
             make.height.equalTo(76)
         }
         

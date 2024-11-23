@@ -30,7 +30,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
     
     private func setupAction() {
         rootView.segmentedControl.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
-        rootView.searchLabel.addTarget(self, action: #selector(searchTextFieldtapped), for: .touchUpInside)
+        rootView.searchTextField.addTarget(self, action: #selector(searchTextFieldTapped), for: .touchUpInside)
     }
     
     private func setupDelegate() {
@@ -55,9 +55,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         return cell
     }
     
-    @objc private func searchTextFieldtapped() {
+    @objc private func searchTextFieldTapped() {
         let VC = HomeSearchViewController()
-        VC.modalPresentationStyle = .fullScreen
+        VC.modalPresentationStyle = .overFullScreen
         present(VC, animated: true)
     }
     

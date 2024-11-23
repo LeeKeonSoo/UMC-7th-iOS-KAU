@@ -32,12 +32,18 @@ class HomeSearchViewController: UIViewController, UICollectionViewDelegate {
     
     private func setupAction() {
         rootView.cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
+        rootView.searchTextField.addTarget(self, action: #selector(searchTextFieldTapped), for: .touchUpInside)
     }
     
     @objc private func cancelButtonTapped() {
         dismiss(animated: true)
     }
     
+    @objc private func searchTextFieldTapped() {
+        let VC = SearchViewController()
+        VC.modalPresentationStyle = .overFullScreen
+        present(VC, animated: true)
+    }
     
 }
 

@@ -14,8 +14,8 @@ class HomeSearchCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor(hex: "#ECECEC")
-        self.layer.cornerRadius = 20
+        contentView.backgroundColor = UIColor(hex: "#ECECEC")
+        contentView.layer.cornerRadius = 20
         
         setupViews()
     }
@@ -26,14 +26,15 @@ class HomeSearchCollectionViewCell: UICollectionViewCell {
     
     let recommendLabel = UILabel().then {
         $0.text = "채원 슈프림 후리스"
+        $0.font = .systemFont(ofSize: 13.5)
     }
     
     private func setupViews() {
-        addSubview(recommendLabel)
+        contentView.addSubview(recommendLabel)
         
         recommendLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.height.equalTo(32)
+            make.centerY.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(11)
         }
     }
 }

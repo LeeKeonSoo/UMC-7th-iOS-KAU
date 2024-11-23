@@ -14,6 +14,10 @@
 		DE2546872CE895AC00C60671 /* KakaoSDKCert in Frameworks */ = {isa = PBXBuildFile; productRef = DE2546862CE895AC00C60671 /* KakaoSDKCert */; };
 		DE67E6492CE658BF00CBDC1A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DE67E6482CE658BF00CBDC1A /* SnapKit */; };
 		DE67E64C2CE658C600CBDC1A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DE67E64B2CE658C600CBDC1A /* Then */; };
+		DE916A572CEB00740041DFD4 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = DE916A562CEB00740041DFD4 /* CombineMoya */; };
+		DE916A592CEB00740041DFD4 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = DE916A582CEB00740041DFD4 /* Moya */; };
+		DE916A5B2CEB00740041DFD4 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = DE916A5A2CEB00740041DFD4 /* ReactiveMoya */; };
+		DE916A5D2CEB00740041DFD4 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = DE916A5C2CEB00740041DFD4 /* RxMoya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,10 +52,14 @@
 			files = (
 				DE2546772CE7279500C60671 /* Alamofire in Frameworks */,
 				DE2546812CE7329D00C60671 /* KakaoSDK in Frameworks */,
+				DE916A592CEB00740041DFD4 /* Moya in Frameworks */,
+				DE916A5D2CEB00740041DFD4 /* RxMoya in Frameworks */,
+				DE916A5B2CEB00740041DFD4 /* ReactiveMoya in Frameworks */,
 				DE67E6492CE658BF00CBDC1A /* SnapKit in Frameworks */,
 				DE67E64C2CE658C600CBDC1A /* Then in Frameworks */,
 				DE2546852CE7329D00C60671 /* KakaoSDKCommon in Frameworks */,
 				DE2546872CE895AC00C60671 /* KakaoSDKCert in Frameworks */,
+				DE916A572CEB00740041DFD4 /* CombineMoya in Frameworks */,
 				DE2546832CE7329D00C60671 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +110,10 @@
 				DE2546822CE7329D00C60671 /* KakaoSDKAuth */,
 				DE2546842CE7329D00C60671 /* KakaoSDKCommon */,
 				DE2546862CE895AC00C60671 /* KakaoSDKCert */,
+				DE916A562CEB00740041DFD4 /* CombineMoya */,
+				DE916A582CEB00740041DFD4 /* Moya */,
+				DE916A5A2CEB00740041DFD4 /* ReactiveMoya */,
+				DE916A5C2CEB00740041DFD4 /* RxMoya */,
 			);
 			productName = KreamClone;
 			productReference = DEC6A9592CA3A3F1003C5D8B /* KreamClone.app */;
@@ -136,6 +148,7 @@
 				DE67E64A2CE658C600CBDC1A /* XCRemoteSwiftPackageReference "Then" */,
 				DE2546752CE7279500C60671 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DE25467F2CE7329D00C60671 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				DE916A552CEB00740041DFD4 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DEC6A95A2CA3A3F1003C5D8B /* Products */;
@@ -397,6 +410,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		DE916A552CEB00740041DFD4 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -434,6 +455,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DE67E64A2CE658C600CBDC1A /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		DE916A562CEB00740041DFD4 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE916A552CEB00740041DFD4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		DE916A582CEB00740041DFD4 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE916A552CEB00740041DFD4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		DE916A5A2CEB00740041DFD4 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE916A552CEB00740041DFD4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		DE916A5C2CEB00740041DFD4 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE916A552CEB00740041DFD4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
