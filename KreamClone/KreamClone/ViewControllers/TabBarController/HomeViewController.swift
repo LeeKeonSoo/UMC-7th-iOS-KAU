@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController, UICollectionViewDataSource {
     
@@ -35,24 +36,48 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
     
     private func setupDelegate() {
         rootView.itemsCollectionView.dataSource = self
+        rootView.justDroppedCollectionView.dataSource = self
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return HomeButtonModel.dummy().count
+        if collectionView.tag == 0 {
+                return HomeButtonModel.dummy().count
+            } else if collectionView.tag == 1 {
+                return JustDroppedModel.dummy().count
+            }
+            return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeButtonCollectionViewCell.identifier, for: indexPath)
-                as? HomeButtonCollectionViewCell else { return UICollectionViewCell() }
-        
-        let list = HomeButtonModel.dummy()
-        
-        cell.imageView.image = list[indexPath.row].image
-        cell.titleLabel.text = list[indexPath.row].title
-        
-        return cell
+        if collectionView.tag == 0 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeButtonCollectionViewCell.identifier, for: indexPath)
+                    as? HomeButtonCollectionViewCell else { return UICollectionViewCell() }
+            
+            let list = HomeButtonModel.dummy()
+            
+            cell.imageView.image = list[indexPath.row].image
+            cell.titleLabel.text = list[indexPath.row].title
+            
+            return cell
+        } else if collectionView.tag == 1 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: JustDroppedCollectionViewCell.identifier, for: indexPath) as? JustDroppedCollectionViewCell else { return UICollectionViewCell() }
+            
+            let list = JustDroppedModel.dummy()
+            
+            cell.itemImage.image = list[indexPath.row].itemImage
+            cell.dealCountLabel.text = list[indexPath.row].dealCount
+            cell.brandLabel.text = list[indexPath.row].brand
+            cell.itemLabel.text = list[indexPath.row].itemName
+            cell.priceLabel.text = list[indexPath.row].price
+            
+            if let url = URL(string: "https://static.luck-d.com/product/6363/main_carousel/NIKE_AIR_FORCE_1_LOW_CACAO_WOW_WMNS_FQ8901259_83610.webp") {
+                cell.itemImage.kf.setImage(with: url)
+            }
+            
+            return cell
+        } else {return UICollectionViewCell()}
     }
     
     @objc private func searchTextFieldTapped() {

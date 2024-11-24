@@ -84,6 +84,7 @@ class HomeView: UIView {
         $0.backgroundColor = .clear
         $0.isScrollEnabled = false
         $0.register(HomeButtonCollectionViewCell.self, forCellWithReuseIdentifier: HomeButtonCollectionViewCell.identifier)
+        $0.tag = 0
     }
     
     private lazy var scrollView = UIScrollView().then {
@@ -91,15 +92,15 @@ class HomeView: UIView {
         $0.showsHorizontalScrollIndicator = false
     }
     
-    private lazy var justDroppedScrollView = UIScrollView().then {
-        $0.showsHorizontalScrollIndicator = true
-        $0.showsVerticalScrollIndicator = false
+    let justDroppedCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout().then {
+        $0.itemSize = CGSize(width: 142, height: 237)
+        $0.minimumLineSpacing = 8
+        $0.scrollDirection = .horizontal
+    }).then {
+        $0.backgroundColor = .clear
         $0.isScrollEnabled = true
-        $0.alwaysBounceHorizontal = true
-    }
-    
-    private lazy var justDroppedItem = UIImageView().then {
-        $0.image = UIImage(named: "just_dropped_list")
+        $0.register(JustDroppedCollectionViewCell.self, forCellWithReuseIdentifier: JustDroppedCollectionViewCell.identifier)
+        $0.tag = 1
     }
     
     private lazy var justDroppedLabel = UILabel().then {
@@ -147,13 +148,12 @@ class HomeView: UIView {
         [
             adImage,
             itemsCollectionView,
-            justDroppedScrollView,
+            justDroppedCollectionView,
             justDroppedLabel,
             justDroppedSubLabel,
             storyScrollView,
             storyScrollLabel,
             storyScrollSubLabel
-            
         ].forEach { contentView.addSubview($0) }
         
         contentView.snp.makeConstraints { make in
@@ -208,14 +208,9 @@ class HomeView: UIView {
             make.width.equalTo(341)
         }
         
-        justDroppedScrollView.snp.makeConstraints { make in
-            make.top.equalTo(itemsCollectionView.snp.bottom).offset(30)
-            make.leading.trailing.equalTo(contentView)
-            make.height.equalTo(340)
-        }
-        
+                
         justDroppedLabel.snp.makeConstraints { make in
-            make.top.equalTo(justDroppedScrollView.snp.top).offset(20)
+            make.top.equalTo(itemsCollectionView.snp.bottom).offset(50)
             make.leading.equalToSuperview().offset(16)
         }
         
@@ -224,8 +219,14 @@ class HomeView: UIView {
             make.leading.equalTo(justDroppedLabel.snp.leading)
         }
         
+        justDroppedCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(justDroppedSubLabel.snp.bottom).offset(14)
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(237)
+        }
+        
         storyScrollView.snp.makeConstraints { make in
-            make.top.equalTo(justDroppedScrollView.snp.bottom)
+            make.top.equalTo(justDroppedCollectionView.snp.bottom).offset(50)
             make.leading.trailing.equalTo(contentView)
             make.height.equalTo(340)
         }
@@ -238,14 +239,6 @@ class HomeView: UIView {
         storyScrollSubLabel.snp.makeConstraints { make in
             make.top.equalTo(storyScrollLabel.snp.bottom).offset(4)
             make.leading.equalTo(storyScrollLabel.snp.leading)
-        }
-        
-        justDroppedScrollView.addSubview(justDroppedItem)
-        
-        justDroppedItem.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(16)
-            make.top.equalToSuperview().offset(73)
-            
         }
         
         storyScrollView.addSubview(storyItem)
