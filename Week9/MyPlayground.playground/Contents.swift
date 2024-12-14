@@ -43,3 +43,15 @@ let number1 = Number(value: 3)
 let number2 = Number(value: 5)
 
 print(number1.sum(with: number2)) // 출력 : 8
+
+var age: Int? = nil
+age = 25
+
+if let age {
+    print("나이는 \(age)살 입니다.")
+}
+
+var score: Double? = nil
+score = 78.5
+
+print(score!)
